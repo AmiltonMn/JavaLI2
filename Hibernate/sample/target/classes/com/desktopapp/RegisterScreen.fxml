@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desktopapp.RegisterController">
+   <children>
+      <AnchorPane>
+         <children>
+            <Pane fx:id="header" prefHeight="54.0" prefWidth="640.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: rgba(88, 88, 255, 0.20);">
+               <children>
+                  <Button fx:id="voltarPageLogin1" layoutX="447.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#loginPage" style="-fx-background-color: blue;" text="Logout" textFill="WHITE" />
+                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Usuários" wrappingWidth="184.50781716406345">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="bttnVisualizarProd" layoutX="508.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#verProdutos" style="-fx-background-color: blue;" text="Visualizar Produtos" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane layoutX="170.0" layoutY="149.0" prefHeight="168.0" prefWidth="300.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+               <children>
+                  <TextField fx:id="newUserLogin" layoutX="135.0" layoutY="14.0" />
+                  <PasswordField fx:id="newUserSenha" layoutX="135.0" layoutY="52.0" />
+                  <Button fx:id="voltarPageLogin" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#loginPage" style="-fx-background-color: blue;" text="Logout" textFill="WHITE" />
+                  <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
+                  <Text layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" />
+                  <Button fx:id="bttnRegistrar" layoutX="220.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#registrarUsuario" style="-fx-background-color: blue;" text="Registrar" textFill="WHITE" />
+                  <Text layoutX="15.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirme sua senha" />
+                  <PasswordField fx:id="confirmaSenha" layoutX="135.0" layoutY="91.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

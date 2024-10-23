@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desktopapp.MainController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane layoutX="183.0" layoutY="161.0" prefHeight="127.0" prefWidth="275.0" style="-fx-background-color: white; -fx-border-radius: 4; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="182.0" AnchorPane.topAnchor="161.0">
+               <children>
+                  <TextField fx:id="inputLogin" layoutX="112.0" layoutY="14.0" />
+                  <PasswordField fx:id="inputSenha" layoutX="112.0" layoutY="52.0" />
+                  <Button fx:id="bttnLogin" layoutX="214.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#logar" style="-fx-background-color: blue;" text="Logar" textFill="WHITE" />
+                  <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
+                  <Text layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" />
+                  <CheckBox fx:id="cbMain" layoutX="14.0" layoutY="92.0" mnemonicParsing="false" text="Ver Senha" />
+               </children>
+            </Pane>
+            <Pane fx:id="header" prefHeight="54.0" prefWidth="640.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: rgba(88, 88, 255, 0.20);">
+               <children>
+                  <Text fontSmoothingType="LCD" layoutX="20.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="184.50781716406345">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </Pane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
