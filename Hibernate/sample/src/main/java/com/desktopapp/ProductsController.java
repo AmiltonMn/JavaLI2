@@ -1,5 +1,7 @@
 package com.desktopapp;
 
+import java.io.IOException;
+import java.lang.ModuleLayer.Controller;
 import java.net.URL;
 import java.util.*;
 import java.util.stream.Gatherer.Integrator;
@@ -39,43 +41,7 @@ public class ProductsController implements Initializable {
         
         return scene;
     }
-
-    @FXML
-    protected TableView<Produto> table;
-
-    @FXML
-    protected TableColumn<Produto, Integer> idCol;
-
-    @FXML
-    protected TableColumn<Produto, String> nameCol;
-
-    @FXML
-    protected TableColumn<Produto, Integer> quantityCol;
-
-    @FXML
-    protected TableColumn<Produto, Float> valueCol;
-
-    @FXML
-    protected Button bttnCadProd;
-
-    @FXML
-    protected Button bttnEdit;
-
-    @FXML
-    protected Button bttnDelete;
-
-    @FXML
-    protected TextField inputNameProd;
-
-    @FXML
-    protected TextField inputQuantityProd;
-
-    @FXML
-    protected TextField inputValueProd;
-
-    @FXML
-    protected Text produtoSelecionado;
-
+    
     @FXML 
     protected void cadastrarProduto() {
 
@@ -169,4 +135,60 @@ public class ProductsController implements Initializable {
             bttnDelete.setDisable(false);
         }
     }
+
+    @FXML
+    public void editSelectedProduct() throws Exception {
+        Stage newStage = new Stage();
+        Scene newScene = EditProductController.CreateScene("EditProductScreen.fxml", crrProduct, produtos());
+
+        newStage.setScene(newScene);
+        newStage.showAndWait();
+        this.table.setItems(FXCollections.observableArrayList(produtos()));
+    }
+
+    @FXML
+    public void deleteSelectedProduct() throws Exception {
+        Stage newStage = new Stage();
+        Scene newScene = EditProductController.CreateScene("EditProductScreen.fxml", crrProduct, produtos());
+
+        newStage.setScene(newScene);
+        newStage.showAndWait();
+        this.table.setItems(FXCollections.observableArrayList(produtos()));
+    }
+
+    @FXML
+    protected TableView<Produto> table;
+
+    @FXML
+    protected TableColumn<Produto, Integer> idCol;
+
+    @FXML
+    protected TableColumn<Produto, String> nameCol;
+
+    @FXML
+    protected TableColumn<Produto, Integer> quantityCol;
+
+    @FXML
+    protected TableColumn<Produto, Float> valueCol;
+
+    @FXML
+    protected Button bttnCadProd;
+
+    @FXML
+    protected Button bttnEdit;
+
+    @FXML
+    protected Button bttnDelete;
+
+    @FXML
+    protected TextField inputNameProd;
+
+    @FXML
+    protected TextField inputQuantityProd;
+
+    @FXML
+    protected TextField inputValueProd;
+
+    @FXML
+    protected Text produtoSelecionado;
 }

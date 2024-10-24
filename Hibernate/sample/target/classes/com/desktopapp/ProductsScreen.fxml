@@ -87,7 +87,7 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button fx:id="bttnEdit" layoutX="563.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: Blue;" text="Edit" textFill="WHITE" />
+            <Button fx:id="bttnEdit" layoutX="563.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#editSelectedProduct" style="-fx-background-color: Blue;" text="Edit" textFill="WHITE" />
             <Button fx:id="bttnDelete" layoutX="615.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete" textFill="WHITE" />
          </children>
       </AnchorPane>

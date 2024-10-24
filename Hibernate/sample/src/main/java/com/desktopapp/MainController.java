@@ -20,8 +20,8 @@ public class MainController {
 
         ctx.begin();
 
-        usuario.setName("Caramelo");
-        usuario.setPassword("12345");
+        usuario.setName("adm");
+        usuario.setPassword("123");
 
         ctx.save(usuario);
         ctx.commit();

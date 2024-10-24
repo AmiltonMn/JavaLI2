@@ -100,4 +100,37 @@ public class Context {
             em = null;
         }
     }
+
+    public <T> void update(Object object) {
+        if (em == null) {
+            System.out.println("Connection is null");
+            return;
+        }
+        try {
+            em.merge(object);
+        } catch (Exception e) {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            e.printStackTrace();
+            em = null;
+        }
+    }
+
+
+    public <T> void delete(Object object) {
+        if (em == null) {
+            System.out.println("Connection is null");
+            return;
+        }
+        try {
+            em.remove(em.contains(object) ? object : em.merge(object));
+        } catch (Exception e) {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            e.printStackTrace();
+            em = null;
+        }
+    }
 }

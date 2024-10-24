@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.desktopapp.EditProductController">
+   <children>
+      <AnchorPane>
+         <children>
+            <Pane fx:id="header" prefHeight="54.0" prefWidth="640.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: rgba(88, 88, 255, 0.20);">
+               <children>
+                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edição de Produto" wrappingWidth="184.50781716406345">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="170.0" layoutY="149.0" prefHeight="168.0" prefWidth="300.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+               <children>
+                  <TextField fx:id="prodNewName" layoutX="135.0" layoutY="14.0" />
+                  <Button fx:id="bttnCancelar" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#cancelarEdicao" style="-fx-background-color: blue;" text="Cancelar" textFill="WHITE" />
+                  <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+                  <Text layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade" />
+                  <Button fx:id="bttnAtualizar" layoutX="221.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#atualizarProduto" style="-fx-background-color: blue;" text="Atualizar" textFill="WHITE" />
+                  <Text layoutX="15.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor" />
+                  <TextField fx:id="prodNewQuantity" layoutX="135.0" layoutY="52.0" />
+                  <TextField fx:id="prodNewValue" layoutX="135.0" layoutY="91.0" />
+               </children>
+            </Pane>
+            <Text fx:id="selectedProductLabel" layoutX="170.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produto Selecionado:  None" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
