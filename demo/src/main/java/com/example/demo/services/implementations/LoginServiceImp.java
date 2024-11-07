@@ -21,6 +21,7 @@ public class LoginServiceImp implements LoginService {
     @Override
     public TokenData login(LoginData loginData) 
     {
+        // Encripta a senha
         var encoder = new BCryptPasswordEncoder();
 
         if (loginData.login() == null || loginData.password() == null) 
@@ -49,6 +50,7 @@ public class LoginServiceImp implements LoginService {
         token.setId(user.getId());
         token.setEmail(user.getEmail());
 
+        // Aquie é feito o JWT
         var jwt = jwtService.get(token);
 
         return new TokenData("Logado com sucesso!.", jwt);

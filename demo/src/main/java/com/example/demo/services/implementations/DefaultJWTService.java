@@ -30,6 +30,7 @@ public class DefaultJWTService implements JWTService<Token> {
         return get(claims);
     }
 
+    // Para validar o token podemos usar essa função, foi adicionado o "setEmail" para verificar no C10
     @Override
     public Token validate(String jwt) 
     {

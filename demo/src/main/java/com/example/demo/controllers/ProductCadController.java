@@ -19,6 +19,7 @@ public class ProductCadController
     @Autowired
     ProductRepository prodRepo;
 
+    // Aqui foi pego da Header o nosso Token, ele já é verificado pelo Login. Este token foi pego do Login e adicionado depois no campo
     @PostMapping("/product")
     public ResponseEntity<String> cadNewProduct(@RequestAttribute("token") Token token, @RequestBody ProductData data) 
     {
